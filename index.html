@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>This Week In</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css'><link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <div class="twi-logo">
+          THIS <span>WEEK IN</span>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#twiNav" aria-controls="twiNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="twiNav">
+        <ul class="navbar-nav align-items-md-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#newsletters">Newsletters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Why TWI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#subscribe-network">Subscribe</a>
+          </li>
+        </ul>
+        <a href="#newsletters" class="btn btn-sm btn-twi-ghost ms-md-3 mt-3 mt-md-0">
+          Browse All
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero hero-padding">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <div class="twi-pill mb-3">
+            <i class="bi bi-stars"></i>
+            Curated weekly newsletters network
+          </div>
+          <h1 class="display-5 fw-semibold mb-3">
+            One home for your favourite <span style="color:var(--twi-primary);">“This Week In”</span> newsletters.
+          </h1>
+          <p class="lead twi-subtle mb-4">
+            Discover focused weekly digests across programming, AI, digital marketing, travel, blogging, and more. Subscribe once or pick the topics that matter most.
+          </p>
+
+          <div class="row g-3 align-items-center mb-4">
+            <div class="col-md-7">
+              <label for="searchInput" class="form-label small twi-subtle mb-1">
+                Search newsletters
+              </label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-search text-muted"></i>
+                </span>
+                <input id="searchInput" type="search" class="form-control" placeholder="e.g. JavaScript, Travel, AI, Blogging">
+              </div>
+            </div>
+            <div class="col-md-5 d-flex flex-column flex-md-row gap-2 mt-2 mt-md-4">
+              <button class="btn btn-twi-primary w-100" type="button" onclick="document.getElementById('subscribe-network').scrollIntoView({ behavior: 'smooth' });">
+                Subscribe to the Network
+              </button>
+              <button class="btn btn-twi-ghost w-100" type="button" onclick="document.getElementById('newsletters').scrollIntoView({ behavior: 'smooth' });">
+                Explore Newsletters
+              </button>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-2 align-items-center mt-2">
+            <span class="newsletter-pill">
+              <span class="dot"></span> 10+ active newsletters
+            </span>
+            <span class="newsletter-pill">
+              <i class="bi bi-envelope-paper-heart"></i> No spam, ever
+            </span>
+            <span class="newsletter-pill">
+              <i class="bi bi-check-circle"></i> Curated by practitioners
+            </span>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <!-- Stacked highlight cards -->
+          <div class="d-flex flex-column gap-3">
+            <div class="twi-card p-3">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="small twi-subtle text-uppercase fw-semibold">Featured This Week</span>
+                <span class="twi-badge-soft">Dev & Backend</span>
+              </div>
+              <h2 class="h5 mb-1">This Week In Golang</h2>
+              <p class="small twi-subtle mb-3">
+                Weekly highlights from the Go ecosystem — performance tips, noteworthy releases, and production war stories.
+              </p>
+              <div class="d-flex justify-content-between align-items-center small twi-subtle">
+                <span>Issues: 120+</span>
+                <span><i class="bi bi-people"></i> 4,500+ readers</span>
+              </div>
+            </div>
+
+            <div class="twi-card p-3">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="small twi-subtle text-uppercase fw-semibold">New & Trending</span>
+                <span class="twi-badge-soft">Travel & Blogging</span>
+              </div>
+              <h2 class="h5 mb-1">This Week In Travel Blogging</h2>
+              <p class="small twi-subtle mb-3">
+                Content ideas, monetization experiments, and workflow tweaks for modern travel creators.
+              </p>
+              <div class="d-flex justify-content-between align-items-center small twi-subtle">
+                <span>Publishing: Weekly</span>
+                <span><i class="bi bi-rocket-takeoff"></i> Growing fast</span>
+              </div>
+            </div>
+
+            <div class="twi-card p-3">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="small twi-subtle text-uppercase fw-semibold">Editor’s Pick</span>
+                <span class="twi-badge-soft">AI & Product</span>
+              </div>
+              <h2 class="h5 mb-1">This Week In AI + Products</h2>
+              <p class="small twi-subtle mb-3">
+                A weekly lens on how AI launches become real features, workflows, and businesses people rely on.
+              </p>
+              <div class="d-flex justify-content-between align-items-center small twi-subtle">
+                <span>Read time: 8–10 min</span>
+                <span><i class="bi bi-lightning-charge"></i> High-signal only</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- row -->
+    </div>
+  </header>
+
+  <!-- NEWSLETTERS GRID -->
+  <section id="newsletters" class="py-5">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
+        <div>
+          <div class="twi-section-title">Newsletter Network</div>
+          <h2 class="twi-section-heading h3 mb-1">Browse all “This Week In” newsletters</h2>
+          <p class="twi-subtle mb-0">
+            Choose one, a few, or subscribe to the whole network.
+          </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="twi-chip active" data-category="all">All topics</button>
+          <button class="twi-chip" data-category="dev">Development</button>
+          <button class="twi-chip" data-category="ai">AI & Data</button>
+          <button class="twi-chip" data-category="marketing">Marketing</button>
+          <button class="twi-chip" data-category="travel">Travel & Lifestyle</button>
+        </div>
+      </div>
+
+      <div id="newsletterGrid" class="row g-4">
+        <!-- Golang -->
+        <div class="col-md-6 col-lg-4 newsletter-card" data-title="golang go backend" data-categories="dev">
+          <article class="twi-card h-100 p-3 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge-rounded" style="background-color:#e0f2fe;color:#0369a1;">Golang</span>
+              <span class="twi-badge-soft">Weekly</span>
+            </div>
+            <h3 class="h5 mb-1">This Week In Golang</h3>
+            <p class="twi-subtle small mb-3">
+              Curated updates from the Go ecosystem: packages, tools, performance threads, and real-world case studies.
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center small twi-subtle">
+              <span><i class="bi bi-people"></i> 4,500+ readers</span>
+              <div class="d-flex gap-2">
+                <!-- Replace # with the Golang Substack URL when ready -->
+                <a href="#" class="btn btn-sm btn-twi-ghost px-3" target="_blank" rel="noopener">View</a>
+                <a href="#" class="btn btn-sm btn-twi-primary px-3" target="_blank" rel="noopener">Subscribe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="col-md-6 col-lg-4 newsletter-card" data-title="javascript js frontend web" data-categories="dev">
+          <article class="twi-card h-100 p-3 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge-rounded" style="background-color:#fef9c3;color:#854d0e;">JavaScript</span>
+              <span class="twi-badge-soft">Weekly</span>
+            </div>
+            <h3 class="h5 mb-1">This Week In JavaScript</h3>
+            <p class="twi-subtle small mb-3">
+              Browser APIs, frameworks, runtimes, and tutorials chosen for developers shipping production apps.
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center small twi-subtle">
+              <span><i class="bi bi-people"></i> 7,000+ readers</span>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-sm btn-twi-ghost px-3" target="_blank" rel="noopener">View</a>
+                <a href="#" class="btn btn-sm btn-twi-primary px-3" target="_blank" rel="noopener">Subscribe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- React -->
+        <div class="col-md-6 col-lg-4 newsletter-card" data-title="react frontend ui" data-categories="dev">
+          <article class="twi-card h-100 p-3 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge-rounded" style="background-color:#e0f2fe;color:#0f172a;">React</span>
+              <span class="twi-badge-soft">Weekly</span>
+            </div>
+            <h3 class="h5 mb-1">This Week In React</h3>
+            <p class="twi-subtle small mb-3">
+              Hooks, server components, performance patterns, and ecosystem news for React developers.
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center small twi-subtle">
+              <span><i class="bi bi-people"></i> 6,200+ readers</span>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-sm btn-twi-ghost px-3" target="_blank" rel="noopener">View</a>
+                <a href="#" class="btn btn-sm btn-twi-primary px-3" target="_blank" rel="noopener">Subscribe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- AI + Products -->
+        <div class="col-md-6 col-lg-4 newsletter-card" data-title="ai products genai llm" data-categories="ai">
+          <article class="twi-card h-100 p-3 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge-rounded" style="background-color:#ede9fe;color:#4c1d95;">AI</span>
+              <span class="twi-badge-soft">Weekly</span>
+            </div>
+            <h3 class="h5 mb-1">This Week In AI + Products</h3>
+            <p class="twi-subtle small mb-3">
+              How AI research becomes features, workflows, and products — curated for builders and product folks.
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center small twi-subtle">
+              <span><i class="bi bi-people"></i> 3,800+ readers</span>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-sm btn-twi-ghost px-3" target="_blank" rel="noopener">View</a>
+                <a href="#" class="btn btn-sm btn-twi-primary px-3" target="_blank" rel="noopener">Subscribe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Digital Marketing -->
+        <div class="col-md-6 col-lg-4 newsletter-card" data-title="digital marketing seo social content" data-categories="marketing">
+          <article class="twi-card h-100 p-3 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge-rounded" style="background-color:#ffedd5;color:#9a3412;">Marketing</span>
+              <span class="twi-badge-soft">Weekly</span>
+            </div>
+            <h3 class="h5 mb-1">This Week In Digital Marketing</h3>
+            <p class="twi-subtle small mb-3">
+              Search, social, email, and analytics highlights for marketers focused on sustainable growth.
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center small twi-subtle">
+              <span><i class="bi bi-people"></i> 5,100+ readers</span>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-sm btn-twi-ghost px-3" target="_blank" rel="noopener">View</a>
+                <a href="#" class="btn btn-sm btn-twi-primary px-3" target="_blank" rel="noopener">Subscribe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Travel Blogging -->
+        <div class="col-md-6 col-lg-4 newsletter-card" data-title="travel blogging solo bloggers" data-categories="travel marketing">
+          <article class="twi-card h-100 p-3 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge-rounded" style="background-color:#dcfce7;color:#14532d;">Travel</span>
+              <span class="twi-badge-soft">Weekly</span>
+            </div>
+            <h3 class="h5 mb-1">This Week In Travel Blogging</h3>
+            <p class="twi-subtle small mb-3">
+              Content prompts, SEO guidance, and monetization experiments built for travel bloggers and solo creators.
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center small twi-subtle">
+              <span><i class="bi bi-people"></i> 2,900+ readers</span>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-sm btn-twi-ghost px-3" target="_blank" rel="noopener">View</a>
+                <a href="#" class="btn btn-sm btn-twi-primary px-3" target="_blank" rel="noopener">Subscribe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Digital Nomads -->
+        <div class="col-md-6 col-lg-4 newsletter-card" data-title="digital nomads remote work visas" data-categories="travel">
+          <article class="twi-card h-100 p-3 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge-rounded" style="background-color:#dcfce7;color:#166534;">Nomads</span>
+              <span class="twi-badge-soft">Bi-weekly</span>
+            </div>
+            <h3 class="h5 mb-1">This Week In Digital Nomads</h3>
+            <p class="twi-subtle small mb-3">
+              Visa news, tools, and destination intel for people building a location-independent life.
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center small twi-subtle">
+              <span><i class="bi bi-people"></i> 3,300+ readers</span>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-sm btn-twi-ghost px-3" target="_blank" rel="noopener">View</a>
+                <a href="#" class="btn btn-sm btn-twi-primary px-3" target="_blank" rel="noopener">Subscribe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Blogging Superstar -->
+        <div class="col-md-6 col-lg-4 newsletter-card" data-title="blogging superstar content creators" data-categories="marketing">
+          <article class="twi-card h-100 p-3 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge-rounded" style="background-color:#ffedd5;color:#9a3412;">Blogging</span>
+              <span class="twi-badge-soft">Weekly</span>
+            </div>
+            <h3 class="h5 mb-1">This Week In Blogging Superstar</h3>
+            <p class="twi-subtle small mb-3">
+              Audience-building, editorial systems, and content strategy tips for serious bloggers.
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center small twi-subtle">
+              <span><i class="bi bi-people"></i> 2,100+ readers</span>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-sm btn-twi-ghost px-3" target="_blank" rel="noopener">View</a>
+                <a href="#" class="btn btn-sm btn-twi-primary px-3" target="_blank" rel="noopener">Subscribe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Crypto & Fintech -->
+        <div class="col-md-6 col-lg-4 newsletter-card" data-title="crypto fintech web3" data-categories="ai marketing">
+          <article class="twi-card h-100 p-3 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge-rounded" style="background-color:#fef3c7;color:#92400e;">Crypto & Fintech</span>
+              <span class="twi-badge-soft">Weekly</span>
+            </div>
+            <h3 class="h5 mb-1">This Week In Crypto & Fintech</h3>
+            <p class="twi-subtle small mb-3">
+              Market shifts, regulation updates, and product launches in financial technology and crypto.
+            </p>
+            <div class="mt-auto d-flex justify-content-between align-items-center small twi-subtle">
+              <span><i class="bi bi-people"></i> 2,600+ readers</span>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-sm btn-twi-ghost px-3" target="_blank" rel="noopener">View</a>
+                <a href="#" class="btn btn-sm btn-twi-primary px-3" target="_blank" rel="noopener">Subscribe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div><!-- row -->
+
+      <div id="noResults" class="text-center twi-subtle small mt-4 d-none">
+        No newsletters match your search yet. Try another keyword or category.
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-5 border-top" style="border-color:#e5e7eb;">
+    <div class="container">
+      <div class="row align-items-start gy-4">
+        <div class="col-lg-5">
+          <div class="twi-section-title">Why This Week In</div>
+          <h2 class="twi-section-heading h3 mb-3">
+            Weekly digests designed for people who do not have time for noise.
+          </h2>
+          <p class="twi-subtle mb-3">
+            Each newsletter is edited by someone actively working in the space. That means curated context, not just a stream of headlines.
+          </p>
+          <p class="twi-subtle mb-3">
+            Choose specific topics or follow the network digest for a quick overview across multiple disciplines in a single email.
+          </p>
+        </div>
+        <div class="col-lg-7">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="twi-feature-icon">
+                <i class="bi bi-filter-square-fill"></i>
+              </div>
+              <h3 class="h6 mb-1">Curated, not scraped</h3>
+              <p class="small twi-subtle mb-0">
+                Editors choose the most useful stories, tools, and threads instead of relying solely on automated feeds.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="twi-feature-icon">
+                <i class="bi bi-bell-fill"></i>
+              </div>
+              <h3 class="h6 mb-1">Predictable cadence</h3>
+              <p class="small twi-subtle mb-0">
+                Issues are quick to scan and consistent in timing, so you can build them into your weekly routine.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="twi-feature-icon">
+                <i class="bi bi-diagram-3-fill"></i>
+              </div>
+              <h3 class="h6 mb-1">One network, many domains</h3>
+              <p class="small twi-subtle mb-0">
+                Development, AI, marketing, travel, and blogging newsletters that share the same editorial principles.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="twi-feature-icon">
+                <i class="bi bi-shield-lock-fill"></i>
+              </div>
+              <h3 class="h6 mb-1">Respect for your inbox</h3>
+              <p class="small twi-subtle mb-0">
+                No list selling and no surprise campaigns. You control which newsletters you receive and when to unsubscribe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div><!-- row -->
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE TO NETWORK (wired to Substack) -->
+  <section id="subscribe-network" class="py-5">
+    <div class="container">
+      <div class="twi-subscribe-card p-4 p-md-5">
+        <div class="row align-items-center gy-3">
+          <div class="col-lg-7">
+            <div class="twi-section-title" style="color:#4b5563;">Subscribe Once</div>
+            <h2 class="h3 mb-2">Get a short weekly digest from across the network.</h2>
+            <p class="small twi-subtle mb-3">
+              The network email highlights only the most useful issues and links from all “This Week In” newsletters, with easy paths to subscribe to individual series.
+            </p>
+            <ul class="small twi-subtle mb-0">
+              <li>Quick skim format with links to go deeper.</li>
+              <li>Only one message a week from the network list.</li>
+              <li>Unsubscribe with a single click at any time.</li>
+            </ul>
+          </div>
+          <div class="col-lg-5">
+            <!-- Substack-wired form -->
+           <form
+  id="substack-form"
+  class="mt-2"
+  action="https://thisweekinio.substack.com/api/v1/free?nojs=true"
+  method="post"
+  target="_blank"
+>
+  <!-- Hidden tracking + context fields (can be empty, JS will fill some of them) -->
+  <input type="hidden" name="first_url" value="">
+  <input type="hidden" name="first_referrer" value="">
+  <input type="hidden" name="current_url" value="">
+  <input type="hidden" name="current_referrer" value="">
+  <input type="hidden" name="first_session_url" value="">
+  <input type="hidden" name="first_session_referrer" value="">
+  <input type="hidden" name="referral_code" value="">
+  <input type="hidden" name="source" value="embed">
+  <input type="hidden" name="referring_pub_id" value="">
+  <input type="hidden" name="additional_referring_pub_ids" value="">
+
+  <!-- Honeypot fields (for spam/bot detection, same as Substack) -->
+  <input
+    type="email"
+    name="fake_email"
+    placeholder="email"
+    style="position:absolute;top:-10000px;left:-10000px"
+    aria-hidden="true"
+    tabindex="-1"
+  />
+  <input
+    type="password"
+    name="fake_password"
+    placeholder="password"
+    style="position:absolute;top:-10000px;left:-10000px"
+    aria-hidden="true"
+    tabindex="-1"
+  />
+
+  <!-- Your actual visible email field -->
+  <label for="networkEmail" class="form-label small mb-1 twi-subtle">
+    Email address
+  </label>
+  <div class="input-group mb-2">
+    <input
+      id="networkEmail"
+      type="email"
+      name="email"
+      class="form-control"
+      placeholder="you@example.com"
+      required
+    >
+    <button class="btn btn-twi-primary" type="submit">
+      Join the Network
+    </button>
+  </div>
+
+  <!-- Optional: UTM tracking -->
+  <input type="hidden" name="utm_source" value="thisweekin.io">
+  <input type="hidden" name="utm_medium" value="website">
+  <input type="hidden" name="utm_campaign" value="network_signup">
+
+  <p class="small twi-subtle mb-0">
+    You’ll be subscribed via Substack and may be asked to confirm your email.
+  </p>
+</form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 small twi-subtle">
+      <div>
+        © <span id="yearSpan"></span> This Week In Network. All rights reserved.
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a href="#">About</a>
+        <a href="#">Newsletters</a>
+        <a href="https://thisweekinio.substack.com/archive" target="_blank" rel="noopener">Archive</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'></script><script  src="./script.js"></script>
+
+  </body>
+  
+</html>
